@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0;
+}
+
+.container {
+	width: 80%;
+	height: 100%;
+}
+
+.timer {
+	user-select: none;
+	font-family: "Tektur", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings:
+		"wdth" 100;
+	position: relative;
+	left: 30%;
+	top: 35%;
+	width: 50%;
+	height: 20%;
+	border: 3px solid transparent;
+	border-radius: 20px;
+	color: rgba(240, 248, 255, 0.637);
+	/*font-size: 170px;*/
+	font-size: 18vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+.interactions {
+	position: relative;
+	left: 30%;
+	top: 60%;
+	width: 50%;
+	height: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+
+	.start-time,
+	.stop-time,
+	.new-time {
+		transition: 0.4s ease all;
+		width: 25%;
+		height: 30%;
+		background: linear-gradient(to right top, #ac1479, blue);
+		border-radius: 20px;
+		border: 2px solid black;
+		color: aliceblue;
+		user-select: none;
+		font-family: "Tektur", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings:
+			"wdth" 100;
+		font-size: 2vh;
+		cursor: pointer;
+	}
+
+	.start-time:hover,
+	.stop-time:hover,
+	.new-time:hover {
+		box-shadow: 0 0 20px aliceblue,
+			inset 0 0 20px aliceblue;
+		border-color: aliceblue;
+		transform: translate(0, -5px);
+	}
+}
+.list-for-past-recordings {
+	width: 20%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.list-recordings {
+	width: 90%;
+	height: 60%;
+	border-radius: 20px;
+	border: 3px solid blue;
+	backdrop-filter: blur(5px);
+	display: flex;
+	align-items: start;
+	justify-content: center;
+}
+.list-record {
+	scrollbar-width: thin;
+	scrollbar-color: blue #ac1479;
+	margin-top: 20px;
+	width: 90%;
+	overflow-y: auto;
+	max-height: 90%;
+	li {
+		font-family: "Tektur", sans-serif;
+		font-optical-sizing: auto;
+		font-weight: 400;
+		font-style: normal;
+		font-variation-settings:
+			"wdth" 100;
+			font-size: 2vh;
+		position: relative;
+		color: aliceblue;
+		list-style: none;
+	}
+}
