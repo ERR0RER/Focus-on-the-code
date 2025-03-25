@@ -7,7 +7,7 @@ const CURRENT_TIME = document.getElementById('current_time_id');
 const LIST_RECORD = document.getElementById('list_record_id')
 let new_time = true;
 const date_record = new Date();
-
+const TAB_NAME = document.getElementById('name-tab');
 
 let hour = 0;
 let minute = 0;
@@ -70,6 +70,9 @@ function updateTime() {
 	}
 	generateTime(true);
 	second++
+
+	UpdateTabName();
+
 }
 
 function startTime() {
@@ -101,3 +104,12 @@ function loadListFromLocalStorage() {
     });
   }
 }
+
+function UpdateTabName() {
+	document.hidden ? TAB_NAME.textContent = CURRENT_TIME.textContent.trim() : TAB_NAME.textContent = 'Focus';
+}
+
+document.addEventListener('visibilitychange', UpdateTabName);
+
+
+
