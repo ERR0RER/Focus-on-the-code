@@ -60,7 +60,6 @@ function generateTime(isNew) {
 }
 
 function updateTime() {
-	
 	if (second >= 60) {
 		minute++;
 		second = 0;
@@ -74,7 +73,6 @@ function updateTime() {
 }
 
 function startTime() {
-
 	generateTime(new_time);
 	updateTime();
 	timerInterval = setInterval(updateTime, 1000);

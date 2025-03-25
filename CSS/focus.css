@@ -113,6 +113,7 @@ body {
 	width: 90%;
 	overflow-y: auto;
 	max-height: 90%;
+	user-select: none;
 	li {
 		font-family: "Tektur", sans-serif;
 		font-optical-sizing: auto;
